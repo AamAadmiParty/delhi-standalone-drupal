@@ -1,0 +1,112 @@
+/*******************************************************************************
+ * _base.scss
+
+ * Base styles define the default look for HTML and common Drupal elements.
+ *
+ * These rules will generally be made up of element selectors for HTML elements
+ * such as headings, paragraphs and lists. Common Drupal elements such as form
+ * items, collapsible fieldsets and messages should be included in this partial.
+ *
+ * The styleguide module (http://drupal.org/project/styleguide) gives you a good
+ * overview of Drupals common elements for styling. By setting a solid baseline
+ * before adding any more specific customisations you ensure that as any new
+ * features are added they will be correctly styled without any extra work.
+ ******************************************************************************/
+
+/* AAP colour sechme */
+ 
+ 
+      $green : #61A220;
+      $nav_blue : #0B6182;
+      $nav_icon : #0A7FAA;
+      $white : #FFFCF9;
+      $orange : #F17E00;
+      $footer : #1E7FA2;
+      $button-color:#F36C01;
+      $button-color-hover:#fcac33;
+      $font-family : Franklin Gothic Demi Cond;
+      $border-color:  #D7D7D7;
+      $question-background : #F7F7F7;
+      $border-radius: 0.4em;
+      $slide_dot: #999999;
+      $slide_dot_active: #676767;
+      $font-family-group : Arial, Helvetica, sans-serif;
+ 
+/* AAP body measurements */
+
+@mixin aap_body_measurements {
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+/* AAP font style */
+
+@mixin aap_font_style {
+      color: $white;
+      font-family: $font-family;
+      font-size: 1.2em;
+      text-decoration: none;
+}
+@mixin aap_font_body {
+      font-family: $font-family-group;
+      font-size: 0.87em;
+      text-decoration: none;
+      font-weight:normal;
+      color: #333333;
+} 
+@mixin aap_content_title {
+      border: 1px solid;
+      border-radius: 0.3em;
+      text-align: center;
+      background-color: $green;
+      margin-bottom: 2%;
+      color:#fff;;
+      font-family: $font-family;
+      font-size: 1.57em;
+      padding: 1%;
+}
+
+
+@mixin aap_content_item {
+      border: 1px solid;
+      border-radius: 0.3em;
+      border-color: $border-color;
+      text-align: left;
+      background-color: white;
+      margin-bottom: 2%;
+      padding: 0 2%;
+      color: #333333;
+      
+      .node__title a {
+       		color:#000;
+       		text-decoration:none; 
+       		font-size:1.2em;
+       		line-height: 1em;
+       	}
+      
+      p {
+      	font-size: 15px !important;
+      	font-style:normal;
+      	font-family: $font-family-group !important;
+
+      	a { 
+      		font-family: $font-family-group;
+         	color:#f17e00; text-decoration:none; font-weight:bold;
+        }
+      }
+      
+}
+
+@mixin aap_content_title_panelizer {
+
+			background: none;
+      color: #333333;
+      font-size: 1.6em;
+      padding-left: 0;
+ }
+ 
+@mixin aap_content_link {
+		font-family: $font-family-group;
+    color:#f17e00; text-decoration:none; font-weight:normal;
+}   

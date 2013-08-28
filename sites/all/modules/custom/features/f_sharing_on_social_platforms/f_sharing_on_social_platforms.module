@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sharing on social platforms  feature.
+ */
+
+include_once 'f_sharing_on_social_platforms.features.inc';

@@ -1,0 +1,66 @@
+/* line 2, ../sass/main_menu.scss */
+.sf-menu.sf-style-default a, .sf-menu.sf-style-default a:visited {
+  color: #000;
+  font-size: 1.3em;
+}
+
+/* line 7, ../sass/main_menu.scss */
+.sf-menu.sf-style-default a {
+  border: none;
+}
+
+/* line 11, ../sass/main_menu.scss */
+.sf-menu.sf-style-default li, .sf-menu.sf-style-default.sf-navbar {
+  background-color: transparent;
+}
+
+/* line 15, ../sass/main_menu.scss */
+.sf-menu.sf-style-default {
+  margin-bottom: 0em;
+}
+
+/* line 20, ../sass/main_menu.scss */
+.sf-menu.sf-style-default li:hover, .sf-menu.sf-style-default li.sfHover, .sf-menu.sf-style-default a:focus, .sf-menu.sf-style-default a:hover, .sf-menu.sf-style-default a:active {
+  background: none repeat scroll 0 0 transparent;
+}
+
+/* line 24, ../sass/main_menu.scss */
+.sf-menu.sf-style-default li li, .sf-menu.sf-style-default li li:hover, .sf-menu.sf-style-default li li.sfHover {
+  background: none repeat scroll 0 0 #ebb22f;
+}
+
+/* line 28, ../sass/main_menu.scss */
+.sf-menu.sf-style-default li li li, .sf-menu.sf-style-default li li li:hover {
+  background: none repeat scroll 0 0 #ebb22f;
+}
+
+/* line 33, ../sass/main_menu.scss */
+.panels-row-footer .panels-flexible-region {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+/* line 37, ../sass/main_menu.scss */
+.panels-row-footer .panels-flexible-region h2 {
+  margin: 0;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: underline;
+}
+/* line 45, ../sass/main_menu.scss */
+.panels-row-footer .panels-flexible-region .pane-content li {
+  list-style-type: none;
+  list-style-image: none;
+}
+/* line 48, ../sass/main_menu.scss */
+.panels-row-footer .panels-flexible-region .pane-content li a {
+  color: white;
+}
+
+/* line 57, ../sass/main_menu.scss */
+#disqus_thread {
+  border-top: 1px solid #cccccc;
+  padding: 10px;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  background: #eee;
+}

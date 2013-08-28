@@ -1,0 +1,29 @@
+diff --git a/sites/all/modules/contrib/connector/connector.module b/sites/all/modules/contrib/connector/connector.module
+index 6f08809..9df96c3 100755
+--- a/sites/all/modules/contrib/connector/connector.module
++++ b/sites/all/modules/contrib/connector/connector.module
+@@ -507,7 +507,22 @@ function _connector_create_account($connector_name, $cid = NULL, $consumer = NUL
+         }
+       }
+     }
+-
++    // If email address is already registered in the site..
++    if (!isset($userinfo['name'])) {
++      form_set_error('name', t('The username %username is already taken.', array('%username' => $info['name']['value'])));
++      return FALSE;
++    }
++    
++    $social_email = gettype($info['email_address']['value']);
++    if (!isset($userinfo['mail']) && $social_email != 'boolean') {
++      form_set_error('mail', t('The e-mail address %email is already taken.', array('%email' => $info['email_address']['value'])));
++      return FALSE;
++    }
++    
++    if ( $social_email == 'boolean') {
++      $userinfo['mail'] = 'tk@gmail.com';
++    }
++    
+     $new_account = user_save('', $userinfo);
+     // Terminate if an error occured during user_save().
+     if (!$new_account) {
+

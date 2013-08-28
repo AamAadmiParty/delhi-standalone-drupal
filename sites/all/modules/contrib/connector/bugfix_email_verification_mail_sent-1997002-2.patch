@@ -1,0 +1,59 @@
+diff --git a/connector.module b/connector.module
+index e58dcba..d540af3 100644
+--- a/connector.module
++++ b/connector.module
+@@ -21,6 +21,35 @@
+ //TODO: Remove $uid from info callbacks?
+ 
+ /**
++ * Implements hook_init().
++ */
++function connector_init() {
++  if(user_is_logged_in()) {
++    global $user;
++    if($user->mail == '') {
++      $email_missing_warning = t("Since the social site you connected via doesn't provide your email, you must fill it in, else your account will become useless.");
++      if(arg(0) != 'user' && arg(2) != 'edit') {
++        $email_missing_warning .= t(" Please add it ") . l(t('here'), 'user/' . $user->uid . '/edit') . '.';
++      }
++      drupal_set_message($email_missing_warning, 'warning');
++    }
++  }
++}
++
++/**
++ * Implements hook_user_update().
++ */
++function connector_user_update(&$edit, $account, $category) {
++  if(empty($edit['original']->mail) && !empty($edit['mail'])) {
++    if(variable_get('user_email_verification', TRUE)) {
++      $op = 'register_no_approval_required';
++      _user_mail_notify($op, $account);
++      drupal_set_message(t('A welcome message with further instructions has been sent to your e-mail address.'));
++    }
++  }
++}
++
++/**
+  * Implements hook_theme().
+  */
+ function connector_theme() {
+@@ -484,6 +513,18 @@ function _connector_create_account($connector_name, $cid = NULL, $consumer = NUL
+     if (!$new_account) {
+       drupal_set_message(t("Error saving user account."), 'error');
+     } else {
++      if(!isset($userinfo['mail'])) {
++        $form_state['uid'] = $new_account->uid;
++        user_login_submit(array(), $form_state);
++        drupal_set_message(t('Registration successful. You are now logged in.'));
++      }
++      else {
++        if(variable_get('user_email_verification', TRUE)) {
++          $op = 'register_no_approval_required';
++          _user_mail_notify($op, $new_account);
++          drupal_set_message(t('A welcome message with further instructions has been sent to your e-mail address.'));
++        }
++      }
+       watchdog('user', 'New external user: %name using module %module.', array('%name' => $authname, '%module' => 'connector'), WATCHDOG_NOTICE, l(t('edit'), 'user/' . $new_account->uid . '/edit'));
+       return $new_account;
+     }

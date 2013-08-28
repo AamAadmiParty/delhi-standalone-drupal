@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content moderation and publication functionality feature.
+ */
+
+include_once 'f_moderation_and_publication.features.inc';

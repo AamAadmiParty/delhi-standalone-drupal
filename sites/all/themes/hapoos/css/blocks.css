@@ -1,0 +1,373 @@
+/**
+ * @file
+ * Block Styling
+ */
+/* line 9, ../sass/blocks.scss */
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em;
+}
+/* line 12, ../sass/blocks.scss */
+.block.first {
+  /* The first block in the region */
+}
+/* line 15, ../sass/blocks.scss */
+.block.last {
+  /* The last block in the region */
+}
+/* line 18, ../sass/blocks.scss */
+.block.odd {
+  /* Zebra striping for each block in the region */
+}
+/* line 21, ../sass/blocks.scss */
+.block.even {
+  /* Zebra striping for each block in the region */
+}
+/* line 24, ../sass/blocks.scss */
+.block h2.block-title {
+  /* Block title */
+}
+
+/* line 29, ../sass/blocks.scss */
+#block-aggregator-category-1 {
+  /* Block for the latest news items in the first category */
+}
+
+/* line 32, ../sass/blocks.scss */
+#block-aggregator-feed-1 {
+  /* Block for the latest news items in the first feed */
+}
+
+/* line 35, ../sass/blocks.scss */
+#block-block-1 {
+  /* First block created with "Add block" link */
+}
+
+/* line 38, ../sass/blocks.scss */
+#block-blog-recent {
+  /* "Recent blog posts" block */
+}
+
+/* line 41, ../sass/blocks.scss */
+#block-book-navigation {
+  /* "Book navigation" block for the current book's table of contents */
+}
+
+/* line 44, ../sass/blocks.scss */
+#block-comment-recent {
+  /* "Recent comments" block */
+}
+
+/* line 47, ../sass/blocks.scss */
+#block-forum-active {
+  /* "Active forum topics" block */
+}
+
+/* line 50, ../sass/blocks.scss */
+#block-forum-new {
+  /* "New forum topics" block */
+}
+
+/* line 53, ../sass/blocks.scss */
+#block-locale-language {
+  /* Language switcher block */
+}
+
+/* line 56, ../sass/blocks.scss */
+#block-menu-menu-NAME {
+  /* Custom menu block */
+}
+
+/* line 59, ../sass/blocks.scss */
+#block-node-recent {
+  /* "Recent content" block */
+}
+
+/* line 62, ../sass/blocks.scss */
+#block-node-syndicate {
+  /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+/* line 65, ../sass/blocks.scss */
+#block-poll-recent {
+  /* "Most recent poll" block */
+}
+
+/* line 68, ../sass/blocks.scss */
+#block-profile-author-information {
+  /* "Author information" block for the profile of the page's author */
+}
+
+/* line 71, ../sass/blocks.scss */
+#block-search-form {
+  /* "Search form" block */
+}
+
+/* line 74, ../sass/blocks.scss */
+#block-shortcut-shortcuts {
+  /* "Shortcuts" block */
+}
+
+/* line 77, ../sass/blocks.scss */
+#block-statistics-popular {
+  /* "Popular content" block */
+}
+
+/* line 80, ../sass/blocks.scss */
+#block-system-main-menu {
+  /* "Main menu" block */
+}
+
+/* line 83, ../sass/blocks.scss */
+#block-system-management {
+  /* "Management" block for Drupal management menu */
+}
+
+/* line 86, ../sass/blocks.scss */
+#block-system-navigation {
+  /* "Navigation" block for Drupal navigation menu */
+}
+
+/* line 89, ../sass/blocks.scss */
+#block-system-user-menu {
+  /* "User menu" block for Drupal user menu */
+}
+
+/* line 92, ../sass/blocks.scss */
+#block-system-help {
+  /* "System help" block */
+}
+
+/* line 95, ../sass/blocks.scss */
+#block-system-main {
+  /* "Main page content" block */
+}
+
+/* line 98, ../sass/blocks.scss */
+#block-system-powered-by {
+  /* "Powered by Drupal" block */
+}
+
+/* line 101, ../sass/blocks.scss */
+#block-user-login {
+  /* "User login form" block */
+}
+
+/* line 104, ../sass/blocks.scss */
+#block-user-new {
+  /* "Who's new" block for a list of the newest users */
+}
+
+/* line 107, ../sass/blocks.scss */
+#block-user-online {
+  /* "Who's online" block for a list of the online users */
+}
+
+/* The below settings for block/pane headings should be used when using rounded corner panes */
+/* line 112, ../sass/blocks.scss */
+div.sidebar-right-panel h2.pane-title,
+div.sidebar-left-panel h2.pane-title {
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+/* line 119, ../sass/blocks.scss */
+div.pane-page-content h2.pane-title {
+  margin-top: 0;
+}
+
+/* line 123, ../sass/blocks.scss */
+div.pane-connector-one-click-block .form-submit {
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+/* line 130, ../sass/blocks.scss */
+div.pane-connector-one-click-block #edit-oauthconnector-google {
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD2232A', endColorstr='#FF7B1419');
+  background-color: #d2232a;
+  border: 0;
+  color: white;
+  text-shadow: #651114 0 -1px 0;
+}
+/* line 15, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-google:hover {
+  text-decoration: none;
+}
+/* line 42, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-google:hover {
+  background-color: #bc1f26;
+}
+/* line 44, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-google:active {
+  background-color: #af1d23;
+}
+/* line 6, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-google.disabled, div.pane-connector-one-click-block #edit-oauthconnector-google[disabled] {
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-google::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 133, ../sass/blocks.scss */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin {
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF6EB2D8', endColorstr='#FF2F82B1');
+  background-color: #6eb2d8;
+  border: 0;
+  color: white;
+  text-shadow: #2a739c 0 -1px 0;
+}
+/* line 15, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin:hover {
+  text-decoration: none;
+}
+/* line 42, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin:hover {
+  background-color: #5aa7d3;
+}
+/* line 44, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin:active {
+  background-color: #4ea1cf;
+}
+/* line 6, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin.disabled, div.pane-connector-one-click-block #edit-oauthconnector-linkedin[disabled] {
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-linkedin::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 136, ../sass/blocks.scss */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter {
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF019AD2', endColorstr='#FF01506C');
+  background-color: #019ad2;
+  border: 0;
+  color: white;
+  text-shadow: #003d53 0 -1px 0;
+}
+/* line 15, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter:hover {
+  text-decoration: none;
+}
+/* line 42, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter:hover {
+  background-color: #0187b9;
+}
+/* line 44, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter:active {
+  background-color: #017ca9;
+}
+/* line 6, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter.disabled, div.pane-connector-one-click-block #edit-oauthconnector-twitter[disabled] {
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-twitter::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 139, ../sass/blocks.scss */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook {
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3B5A9B', endColorstr='#FF1F2F51');
+  background-color: #3b5a9b;
+  border: 0;
+  color: white;
+  text-shadow: #18243f 0 -1px 0;
+}
+/* line 15, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook:hover {
+  text-decoration: none;
+}
+/* line 42, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook:hover {
+  background-color: #344f89;
+}
+/* line 44, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook:active {
+  background-color: #30497d;
+}
+/* line 6, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook.disabled, div.pane-connector-one-click-block #edit-oauthconnector-facebook[disabled] {
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, ../sass-extensions/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+div.pane-connector-one-click-block #edit-oauthconnector-facebook::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 146, ../sass/blocks.scss */
+div.sidebar-right-panel div.panel-separator,
+div.sidebar-left-panel div.panel-separator {
+  /* margin: 0 0 3em 0; */
+}
+
+/* line 154, ../sass/blocks.scss */
+div.sidebar-left-panel .view-content .views-row,
+div.sidebar-right-panel .view-content .views-row {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  background: url(../images/arrow_bullet.png) no-repeat left 4px;
+}
