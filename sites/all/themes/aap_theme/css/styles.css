@@ -907,13 +907,17 @@
   border-radius: 4px;
   color: white !important;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003718}}
+.blue-buttons:hover {
+  color: #EFF743 !important;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003719}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003723}}
 .blue-buttons.link-join-us {
   background: url("../images/action_call.gif") no-repeat scroll 0% 12.5% #0b6182;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003722}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003726}}
 .blue-buttons.link-donate {
   background: url("../images/action_call.gif") no-repeat scroll 0% 0% #0b6182;
 }
@@ -923,7 +927,7 @@
  * Layout for candidate detail page
  *
 *******************************************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003736}}
 .aap-page-content-class #candidate-detail-page {
   border: 1px solid;
   border-radius: 0.3em;
@@ -934,7 +938,7 @@
   padding: 0 2%;
   color: #333333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003733}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003737}}
 .aap-page-content-class #candidate-detail-page .panels-flexible-row > .inside {
   width: 720px;
 }
@@ -958,25 +962,25 @@
   text-decoration: none;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003738}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003742}}
 .aap-page-content-class #candidate-detail-page .candidate-info-region {
   margin-left: 6em;
   width: 500px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003742}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003746}}
 .aap-page-content-class #candidate-detail-page .candidate-info-region .candidate-name .field__item {
   font-size: 1.2em;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003746}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003750}}
 .aap-page-content-class #candidate-detail-page .candidate-info-region .field__items {
   width: 250px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003750}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003754}}
 .aap-page-content-class #candidate-detail-page .pane-content {
   margin-top: 0.3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003753}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003757}}
 .aap-page-content-class #candidate-detail-page .pane-content .field__label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.87em;
@@ -986,7 +990,7 @@
   font-weight: bold;
   width: 200px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003758}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003762}}
 .aap-page-content-class #candidate-detail-page .pane-content .field__item {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.87em;
@@ -994,7 +998,7 @@
   font-weight: normal;
   color: #333333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003760}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003764}}
 .aap-page-content-class #candidate-detail-page .pane-content .field__item a {
   font-family: Arial, Helvetica, sans-serif;
   color: #f17e00;
@@ -1007,7 +1011,7 @@
   * Layout for constituency detail page
   *
  *******************************************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003780}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003784}}
 .aap-page-content-class #constituency-detail-page {
   border: 1px solid;
   border-radius: 0.3em;
@@ -1018,7 +1022,7 @@
   padding: 0 2%;
   color: #333333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003781}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003785}}
 .aap-page-content-class #constituency-detail-page .panels-flexible-row > .inside {
   width: 720px;
 }
@@ -1042,11 +1046,11 @@
   text-decoration: none;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003786}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003790}}
 .aap-page-content-class #constituency-detail-page .pane-content {
   margin-top: 2%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003788}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003792}}
 .aap-page-content-class #constituency-detail-page .pane-content .field__label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.87em;
@@ -1056,7 +1060,7 @@
   font-weight: bold;
   width: 200px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003793}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003797}}
 .aap-page-content-class #constituency-detail-page .pane-content .field__item {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.87em;
@@ -1064,31 +1068,31 @@
   font-weight: normal;
   color: #333333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003797}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003801}}
 .aap-page-content-class #constituency-detail-page .constituency-detail-region {
   margin-left: 5em;
   width: 500px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003802}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003806}}
 .aap-page-content-class #constituency-detail-page .aap-candidate-info p {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003805}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003809}}
 .aap-page-content-class #constituency-detail-page .aap-candidate-info a {
   font-family: Arial, Helvetica, sans-serif;
   color: #f17e00;
   text-decoration: none;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003809}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003813}}
 .aap-page-content-class #constituency-detail-page .aap-constituency-row {
   border-bottom: 1px solid #d7d7d7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003813}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003817}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .aap-candidate-consituency {
   font-size: 1.3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003816}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003820}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .aap-candidate-name {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.87em;
@@ -1099,65 +1103,65 @@
   font-size: 1.2em;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003826}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .pane-title {
   background: none;
   color: #333333;
   font-size: 1.6em;
   padding-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003826}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003830}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .aap-shortlisted-candidate {
   border-bottom: 1px solid #d7d7d7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003833}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .views-row-last.aap-shortlisted-candidate {
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003834}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003838}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .aap-shortlisted-candidate .panel-flexible {
   padding: 1em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003839}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003843}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .views-row-first.aap-shortlisted-candidate .panel-flexible {
   padding: 0 0 1em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003843}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003847}}
 .aap-page-content-class #constituency-detail-page .constituency-candidate-region .pane-content {
   border-bottom: 1px solid #d7d7d7;
   padding-bottom: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003849}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003853}}
 .aap-page-content-class #constituency-detail-page .shs-hierarchy {
   list-style: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003851}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003855}}
 .aap-page-content-class #constituency-detail-page .shs-hierarchy .state:before {
   font-weight: bold;
   padding-right: 5em;
   content: "State:";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003856}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003860}}
 .aap-page-content-class #constituency-detail-page .shs-hierarchy .district:before {
   font-weight: bold;
   padding-right: 4em;
   content: "District:";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003861}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003865}}
 .aap-page-content-class #constituency-detail-page .shs-hierarchy .constituency:before {
   font-weight: bold;
   padding-right: 1em;
   content: "Constituency:";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003867}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003871}}
 .aap-page-content-class #constituency-detail-page .shs-hierarchy li:after {
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003870}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003874}}
 .aap-page-content-class #constituency-detail-page .constituency-description {
   margin-left: 2.3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003875}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003879}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .pane-title {
   background: none;
   color: #333333;
@@ -1165,11 +1169,11 @@
   padding-left: 0;
   margin-left: 3.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003880}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003884}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .adr {
   margin-left: 3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003886}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003890}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .fn, .aap-page-content-class #constituency-detail-page .constituency-contact-fields .street-address,
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .postal-code, .aap-page-content-class #constituency-detail-page .constituency-contact-fields .country-name,
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .locality, .aap-page-content-class #constituency-detail-page .constituency-contact-fields .region,
@@ -1181,12 +1185,12 @@
   color: #333333;
   font-size: 1.1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003890}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003894}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .email, .aap-page-content-class #constituency-detail-page .constituency-contact-fields .tel {
   margin-top: 0.5px;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003893}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003897}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .email a, .aap-page-content-class #constituency-detail-page .constituency-contact-fields .tel a {
   font-family: Arial, Helvetica, sans-serif;
   color: #f17e00;
@@ -1195,15 +1199,15 @@
   font-weight: bold;
   font-size: 1.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003899}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003903}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-fields .email abbr[title], .aap-page-content-class #constituency-detail-page .constituency-contact-fields .email acronym[title], .aap-page-content-class #constituency-detail-page .constituency-contact-fields .tel abbr[title], .aap-page-content-class #constituency-detail-page .constituency-contact-fields .tel acronym[title] {
   border-bottom-width: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003904}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003908}}
 .aap-page-content-class #constituency-detail-page .constituency-contact-container {
   margin-left: 2.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003909}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/AAP_Delhi\/sites\/all\/themes\/aap_theme\/sass\/_layout\.scss}line{font-family:\00003913}}
 .aap-page-content-class #constituency-detail-page .constituency-container-1 h2 {
   margin: 0;
 }
