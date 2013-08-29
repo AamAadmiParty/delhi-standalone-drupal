@@ -88,6 +88,7 @@ function aap_tweaks_form_alter(&$form, &$form_state, $form_id) {
 				'#suffix' => '</div>',
 		);
 		
+	// Add login in link to search block in header	
 		$login_link = l('Log In', $base_url . '/user');
 		
 		$form ['login_link'] = array (

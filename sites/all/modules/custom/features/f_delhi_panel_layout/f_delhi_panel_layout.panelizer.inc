@@ -208,7 +208,7 @@ function f_delhi_panel_layout_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'aap-delhi-region',
+      'css_class' => 'aap-delhi-region container-1',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -239,7 +239,7 @@ function f_delhi_panel_layout_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'aap-delhi-region',
+      'css_class' => 'aap-delhi-region container-2',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -1026,10 +1026,12 @@ function f_delhi_panel_layout_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => '',
+        'image_style' => 'constituency_image',
         'image_link' => '',
       ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1065,7 +1067,7 @@ function f_delhi_panel_layout_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'aap-delhi-region',
+      'css_class' => 'aap-delhi-region container-1',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -1094,7 +1096,7 @@ function f_delhi_panel_layout_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'aap-delhi-region',
+      'css_class' => 'aap-delhi-region container-2',
     );
     $pane->extras = array();
     $pane->position = 1;

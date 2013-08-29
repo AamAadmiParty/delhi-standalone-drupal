@@ -711,7 +711,21 @@
  				margin-top: 4px;
         border-bottom: 1px solid $border-color; 
     }
-
+.blue-buttons {
+  			padding: 0.8em 5em;
+  			border-radius: 4px;
+  			color:white !important;
+  			&:hover {
+  				color:#EFF743 !important;
+  			}
+  } 
+  
+	.blue-buttons.link-join-us {
+				background: url("../images/action_call.gif") no-repeat scroll 0% 12.5% #0b6182;
+	}
+	.blue-buttons.link-donate {
+				background: url("../images/action_call.gif") no-repeat scroll 0% 0% #0b6182;
+	}
  /*********************************************************************
   
   * Layout for candidate detail page
