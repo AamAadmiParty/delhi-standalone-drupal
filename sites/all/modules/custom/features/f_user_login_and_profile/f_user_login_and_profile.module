@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the User login and profile feature.
+ */
+
+include_once 'f_user_login_and_profile.features.inc';

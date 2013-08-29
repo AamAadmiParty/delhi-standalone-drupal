@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content architecture and user roles feature.
+ */
+
+include_once 'f_content_and_user_roles.features.inc';

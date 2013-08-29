@@ -1,0 +1,63 @@
+
+.sf-menu.sf-style-default a, .sf-menu.sf-style-default a:visited {
+    color: #000;
+    font-size: 1.0em;
+}
+
+.sf-menu.sf-style-default a {
+  border:none;	
+}
+
+.sf-menu.sf-style-default li, .sf-menu.sf-style-default.sf-navbar {
+	background-color: transparent;
+}
+
+.sf-menu.sf-style-default {
+    margin-bottom: 0em;
+}
+
+
+.sf-menu.sf-style-default li:hover, .sf-menu.sf-style-default li.sfHover, .sf-menu.sf-style-default a:focus, .sf-menu.sf-style-default a:hover, .sf-menu.sf-style-default a:active {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.sf-menu.sf-style-default li li, .sf-menu.sf-style-default li li:hover, .sf-menu.sf-style-default li li.sfHover  {
+    background: none repeat scroll 0 0 #EBB22F;
+}
+
+.sf-menu.sf-style-default li li li, .sf-menu.sf-style-default li li li:hover {
+    background: none repeat scroll 0 0 #EBB22F;
+}
+
+.panels-row-footer {
+	.panels-flexible-region {
+	  padding-top:12px;
+	  padding-bottom: 12px;
+	  
+	  h2 {
+      margin:0;
+      font-size:1.1em;
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .pane-content {
+      li {
+        list-style-type: none;
+        list-style-image:none;
+        a {
+          color: white;
+        } 
+      }
+    }
+  }
+}
+
+
+#disqus_thread {
+  border-top: 1px solid #ccc;
+	padding: 10px;
+	margin-top: 26px;
+	margin-bottom: 20px;	
+	background:#eee;
+}

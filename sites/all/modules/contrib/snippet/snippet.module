@@ -1,0 +1,146 @@
+<?php
+
+/**
+ * @file
+ * The module file for snippet.
+ *
+ */
+
+/**
+ * Menu item prefix.
+ */
+define('SNIPPET_MENU_PREFIX', 'admin/structure/snippet/list');
+
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ * @param $module
+ * @param $type
+ */
+function snippet_ctools_plugin_directory($module, $type) {
+  // Load the plugins.
+  return "plugins/{$type}";
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ *
+ * Tell CTools that we support the default_snippet_presets API.
+ */
+function snippet_ctools_plugin_api($owner, $api) {
+  if ($owner == 'snippet' && $api == 'default_snippet') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implemetation of hook_permission()
+ */
+function snippet_permission() {
+  $permissions = array();
+  $permissions['administer snippet'] = array(
+    'title' => t('Administer snippet'),
+    'description' => t('Perform administration tasks for snippet.'),
+    'restrict access' => TRUE,
+  );
+  $permissions['manage snippet'] = array(
+    'title' => t('Manage snippet'),
+    'description' => t('Allow user to create, modify snippet as well see revisions, revert to perticuler revision of the snippet'),
+  );
+  return $permissions;
+}
+
+/**
+ * Loads the data for the snippet
+ * @param $snippet_name
+ *  machine understanable name of the snippet which wants to get loaded
+ */
+function snippet_load($snippet_name, $rid = NULL) {
+  if ($snippet_name) {
+    ctools_include('export');
+    $snippet = ctools_export_crud_load('snippet', $snippet_name);
+
+    $snippet_revision = db_select('snippet_revision', 'sr')
+                        ->fields('sr', array())
+                        ->condition('name', $snippet->name);
+
+    if ($rid) {
+      $snippet_revision = $snippet_revision->condition('rid', $rid);
+    }
+    else {
+      $snippet_revision = $snippet_revision->condition('is_current', 1);
+    }
+    $snippet_revision = $snippet_revision->execute()->fetch();
+    $snippet->content = !empty($snippet_revision->content) ? $snippet_revision->content : '' ;
+    $snippet->content_format = !empty($snippet_revision->content_format) ? $snippet_revision->content_format : NULL ;
+    $snippet->timestamp = !empty($snippet_revision->timestamp) ? $snippet_revision->timestamp : NULL ;
+    $snippet->is_current = !empty($snippet_revision->is_current) ? $snippet_revision->is_current : NULL ;
+    $snippet->rid = !empty($snippet_revision->rid) ? $snippet_revision->rid : NULL ;
+    $snippet->title_revision = !empty($snippet_revision->title) ? $snippet_revision->title : NULL ;
+    return $snippet;
+  }
+}
+
+/**
+ * Implemetation of hook_theme()
+ */
+function snippet_theme() {
+  return array(
+    'snippet_content_show' => array(
+      'variables' => array(),
+    ),
+  );
+}
+
+/**
+ * Theme function to output the snippet
+ * this helps render content for preview as well on live page
+ */
+function theme_snippet_content_show($vars) {
+
+  // for viewing the preview of the snippet
+  $in_preview = isset($vars['in_preview']) ? $vars['in_preview'] : 0;
+
+  $snippet_contextual_links = $heighlight = $heighlight_style = $edit = $preview_heading = "";
+  if (user_access('manage snippet') && (!$in_preview)) {
+    $heighlight = "snippet-highlight";
+    $heighlight_style = "style='background: #FFFFEA;'";
+
+    // get the destination
+    $destination = drupal_get_destination();
+
+    $operations['links']['edit'] = array(
+      'title' => t('Edit this'),
+      'href' => SNIPPET_MENU_PREFIX . "/" . $vars['name'] . "/edit",
+      'query' => $destination,
+    );
+    $operations['links']['revert'] = array(
+      'title' => t('Revisions'),
+      'href' => SNIPPET_MENU_PREFIX . "/" . $vars['name'] . "/revision",
+      'query' => $destination,
+      );
+    $operations['attributes'] = array('class' => array('links', 'inline'));
+    $snippet_contextual_links = theme('links', $operations);
+    $snippet_contextual_links = "<div class='snippet-links'>{$snippet_contextual_links}</div>";
+  }
+
+  $heighlight_style = $heighlight_style;
+  if ($in_preview) {
+    $heighlight_style = "style='background: #FFFFEA;'";
+    $preview_heading = '<h3>' . t('Preview') . '</h3>';
+  }
+
+  // this snippet_id would be used for submitting/updating the correct snippet
+  $snippet_id = "snippet-" . $vars['name'] . (($vars['rid']) ? ("-" . $vars['rid']) : '');
+  $content = "<div class = 'edit' id = '" . $snippet_id . "'>" . $vars['content'] . "</div>";
+
+  $title = '';
+  if (!empty($vars['title'])) {
+    $title = "<h2 class = 'snippet-title'>" . $vars['title'] . "</h2>";
+  }
+
+  $output = "<div class = \"snippet-view {$heighlight}\" {$heighlight_style}>" . $preview_heading . $title . $content . $snippet_contextual_links . "</div>";
+  return $output;
+}
+
+

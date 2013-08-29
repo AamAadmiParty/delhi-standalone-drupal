@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Layout and content feature.
+ */
+
+include_once 'f_layout_and_content.features.inc';

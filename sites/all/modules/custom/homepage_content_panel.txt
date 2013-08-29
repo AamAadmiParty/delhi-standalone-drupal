@@ -1,0 +1,42 @@
+<div class="home-box-top">
+  <!-- TODO main banner image below -->
+  <img alt="Corruption"	src="http://adc.local/sites/default/files/issues/media/corruption.jpg" />
+</div>
+
+<div class="home-box-bottom">
+	<div class="movstrip clearfix">
+	<ul>
+		<li>
+		  <!-- TODO small banner image for slot 1 -->
+		  <img src="http://adc.local/sites/default/files/issues/media/corruption.jpg" />
+		</li>
+		
+		<li>
+		  <!-- TODO small banner image for slot 2 -->
+		  <img src="http://adc.local/sites/default/files/issues/media/corruption.jpg" />
+	  </li>
+	  
+    <li>
+      <!-- TODO Multiple small banner images for slot 3 -->
+      <div id="small-slider">
+      <div id="homepage-slides">
+      <ul class="slides_container">
+        <li class="slide">
+          <img src="http://adc.local/sites/default/files/group_image/price.jpg" />
+        </li>
+        <li class="slide">
+          <img src="http://adc.local/sites/default/files/group_image/electric_meter.jpg" />
+        </li>
+      </ul>
+      </div>
+      </div>
+    </li>
+		
+		<li>
+		  <!-- TODO small banner image for slot 4 -->
+		  <img src="http://adc.local/sites/default/files/group_image/electric_meter.jpg" />
+		</li>
+	
+	</ul>
+	</div>
+</div>

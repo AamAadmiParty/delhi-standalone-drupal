@@ -1,0 +1,139 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+
+@import "base";
+
+
+.node { /* Node wrapper */
+
+  .preview & { /* Preview of the content before submitting new or updated content */
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+  .node-title { /* Node title */
+    line-height: 1.5em;
+  }
+
+  .user-picture { /* The picture of the node author */
+  }
+
+  .submitted { /* The "posted by" information */
+    color: #999;
+    font-size: 0.8em;
+    a {
+      color: #999;
+      text-decoration: underline;
+    }
+  }
+
+  .content { /* Node's content wrapper */
+  }
+
+  ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
+    display: block;
+    margin: 1em 0em;
+  }
+
+}
+
+.node-promoted { /* A node that has been promoted to the front page */
+}
+
+.node-sticky { /* A sticky node (displayed before others in a list) */
+}
+
+.node-by-viewer { /* A node created by the current user */
+}
+
+.node-teaser { /* A node displayed as teaser */
+ /* padding-bottom: 2em; */
+  border-bottom: 1px dashed #ccc;
+ /* margin-bottom: 2em; */
+  
+  .node-title {
+    font-size: 1.4em;
+    a {
+      color: #000;
+    }
+  }
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+
+.node-page { /* Page content node */
+}
+
+.node-article { /* Article content node */
+}
+
+.node-unpublished { /* Unpublished nodes */
+  /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+
+  p.unpublished { /* The word "Unpublished" displayed underneath the content. */
+    @include unpublished-div;
+  }
+}
+
+li.node-readmore {
+  float: right;
+}
+
+.view-mode-full .service-links {
+  background: #eee;
+  padding: 0.5em;
+  color: #999;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  .service-label {
+    margin-bottom: 0.5em;
+  }
+  ul.links {
+  }
+}
+
+/* Styles for home page (panel content) image banner content */
+div.home-box-top {
+  width: 730px;
+  margin-bottom: 2em;
+  text-align: center;
+  img {
+    width: 730px;
+  }
+}
+div.home-box-bottom {
+  width: 730px;
+  margin-bottom: 0.5em;
+  div.movstrip {
+   overflow: hidden;
+   ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   ul li {
+    float: left;
+    width: 170px;
+    margin: 6px;
+    padding: 0px;
+   }
+   ul.slides_container li {
+    margin: 0;
+   }
+  }
+  img {
+    width: 170px;
+    height: 100px;
+  }
+  li.last img {
+    width: 55px;
+    height: 55px;
+  }
+}

@@ -1,0 +1,16 @@
+Index: sites/all/modules/contrib/oauth/includes/DrupalOAuthClient.inc
+===================================================================
+--- sites/all/modules/contrib/oauth/includes/DrupalOAuthClient.inc	(revision 3532)
++++ sites/all/modules/contrib/oauth/includes/DrupalOAuthClient.inc	(working copy)
+@@ -181,8 +181,9 @@
+     if ($this->version == OAUTH_COMMON_VERSION_1 && $options['callback']) {
+       $options['params']['oauth_callback'] = $options['callback'];
+     }
+-    $options['params']['oauth_token'] = $this->requestToken->key;
+-
++    if(!strpos($endpoint,'facebook')){
++      $options['params']['oauth_token'] = $this->requestToken->key;
++    }
+     $endpoint = $this->getAbsolutePath($endpoint);
+     $append_query = strpos($endpoint, '?') === FALSE ? '?' : '&';
+     return $endpoint . $append_query . http_build_query($options['params'], NULL, '&');
