@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Issue based user groups feature.
+ */
+
+include_once 'f_issue_based_groups.features.inc';

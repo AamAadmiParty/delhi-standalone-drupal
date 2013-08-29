@@ -1,0 +1,15 @@
+; $Id: snippet.info $
+name = Snippets
+description = "Provides a text-container exportable."
+
+version = 7.x
+core = 7.x
+project = snippet
+dependencies[] = ctools
+
+; Information added by drupal.org packaging script on 2012-12-17
+version = "7.x-1.0-rc4"
+core = "7.x"
+project = "snippet"
+datestamp = "1355744928"
+

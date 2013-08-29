@@ -1,0 +1,314 @@
+/*******************************************************************************
+ * _components.scss
+ *
+ * Imports more partials that contain full components (modules in SMACSS), their
+ * sub-components and modifiers.
+ *
+ * Components are discrete parts of your page that should sit within the regions
+ * of your layouts. You should try to abstract your components as much as
+ * possible to promote reuse throughout the theme. Components should be flexible
+ * enough to respond to any width and should never rely on context
+ * (e.g. .sidebar-first .component) for styling. This allows modules to be
+ * placed throughout the theme with no risk of them breaking.
+ *
+ * If you find you need to change the look of a component depending on it's
+ * context you should avoid using context based classes at all costs. Instead it
+ * is better to add another "modifier" class to the component to alter the
+ * styling. Again, this promotes reuse.
+ *
+ * Sub-components are the individual parts that make up a component. As a
+ * general rule, adding a class to target a sub-component is a much better
+ * option than using descendant selectors or element selectors. In many cases
+ * sub-components can be made more reusable by making them components in their
+ * own right, so they can then be used within other components.
+ *
+ * Almost everything that doesn't belong in base should be made a component.
+ * Here's some common examples throughout Drupal:
+ *
+ * - Blocks
+ * - Content Types - For example, you may have a generic node component that
+ *      contains sub-components for the submitted by line and links. Specific
+ *      components can then be created for each content type to style the
+ *      specifics of each. Finally, by using entity view modes you can easily
+ *      apply modifications based on the .node-[view-mode] classes.
+ * - Forms - For instance the log in form.
+ * - Views - Each views output style could be made into a component, the content
+ *       of each row should be provided my a view mode styled by it's component
+ *       CSS. Exposed filter forms, views pagers and other views elements are
+ *       also good candidates for components.
+ ******************************************************************************/
+ @import "compass/css3/border-radius";
+ 
+.aap-search-class {
+     
+     	form .form-submit {
+      background: url("../images/search.png") no-repeat scroll 50% 50% $orange;
+      border-radius: 0;
+    	padding:0;
+    	margin:0;
+    	width: 30px;
+    	height: 1.3em;
+    	
+      &:hover {
+        	opacity: 0.4;
+      	}
+ 		}
+     
+		.aap-language {
+    	.form-item label,
+    	.form-actions label {
+       		display: inline;
+       		padding: 0;
+       		color:#858484;
+       		font-weight: bold;
+     		}
+     .form-select {
+      	border: 1px solid $border-color;
+      	font-family: $font-family-group;
+    		height: 1.9em;
+    		padding: 0.1em;
+   			width: 77px;
+   			color:#858484;
+   			background: white;
+      }
+ 		}	
+     	   
+		.container-inline div {
+ 			display:block;
+ 			float:left;
+ 			margin-top:1%;
+ 		}
+ 	
+		.aap-header-content, 
+			.container-inline {
+ 			padding-right:9px;
+ 			float:left;
+ 			margin-top:1%;
+ 		}
+ 
+    input[type="text"] {
+    padding: 6px 7px;
+    width: 90%;
+    border-radius: 0 0 0 0;
+    height: 13px;
+    font-family:  $font-family-group;
+    font-size: 0.8em;
+   } 
+}
+ 
+ 
+ .aap-contact-form-class {
+  .form-submit {
+      float: right;
+  }
+ }
+ 
+form .form-submit {
+        padding: 0.3em 1em;
+        text-align: center;
+        background: $button-color;
+        border-radius: 0.3em;
+        color: white;
+        border: 0 none;
+        @include aap_font_style;
+        text-shadow:1px 1px 1b1c28;
+        cursor:pointer;
+        
+        &:hover {
+        	background: $button-color-hover;
+        }
+ }
+ 
+ .aap-main-content {
+ 		form .form-submit,
+ 		.read-more,
+ 		.more-link,
+ 		.donate-link  {
+ 				position:absolute;
+ 				bottom: 0;
+ 				left:0;
+ 				background:  #F28300;
+ 				padding: 0.3em 1em;
+ 				@include border-radius(0.3em);
+ 				a {
+					@include aap_font_style ;
+				 text-shadow:1px 1px 1b1c28;
+				}
+				
+				&:hover {
+      	  	background:  $button-color-hover;
+      		}
+ 			}
+ 			
+ }
+ 
+input[type="text"] {
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: 0.3em;
+    height: 24px;
+}
+
+.form-item textarea {
+      width: 100%;
+      border: 1px solid $border-color;
+      border-radius: 0.5em;
+}
+
+
+label {
+  padding: 2px 1em 0 0;
+}
+input[type=radio], input.radio {
+  margin: 2px 0 0 2px;
+  margin: 0 0 0 2px;
+  vertical-align: middle;
+}
+
+
+.form-item label, .form-actions label {
+    @include aap_font_body;
+    vertical-align: middle;
+    font-size:0.9em;
+    color:#333333;
+    font-weight: normal;
+}
+
+.aap-donation-class {
+    .form-checkboxes .form-item, .form-radios .form-item {
+          float: left;
+          width: 33%;
+     }   
+}
+
+.sliding-region-class {
+    .views-content-counter {
+          float : left;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+          
+          background: none repeat scroll 0 0 $slide_dot;
+          @include border-radius(0.2em);
+          color: white;
+          font-family: arial;
+          font-size: 0.6em;
+          font-weight:bold;
+          text-align: center;
+          width: 12px;
+          }
+     }
+
+.views-slideshow-controls-bottom {
+		margin: auto;
+    width: 17%;
+    float:right;
+    
+    .active {
+    	.views-content-counter {
+    		 background: none repeat scroll 0 0  $slide_dot_active;
+    	}
+    }
+    
+}  
+
+/*********************************************************************
+  
+    * Layout for dafault page
+    *
+    *******************************************************************/
+    
+    
+.aap-donation-right-class {
+    .form-checkboxes .form-item, .form-radios .form-item {
+          float: left;
+          width: 50%;
+     }   
+     
+     form .form-submit {
+     		bottom: 9px;
+    		left: 36px;
+    		width: 6em;
+    		padding:3%;
+     }
+     .form-item label, .form-actions label {
+     		padding: 7% 1%;
+     }  
+}
+
+.pager {
+    float: right;
+    
+    li.pager__item { 
+    		background:url(../images/pager__item_sep.png) right 10px no-repeat;
+    		font-weight: normal;
+    		
+    		a{ 
+    			color:#0a6181;
+    			font-size:14px; 
+    			font-family:Arial, Helvetica, sans-serif;
+    			text-decoration:none;
+    			
+    			&:hover {
+    				 color:#000000;
+    			}
+    		}
+    	}
+    	
+   li.pager__item--last {
+   		background:url(../images/pager__item_sep.png) left 10px no-repeat;
+   }		  			  	
+}
+
+.surveymonkey-drupal-popup {
+  display: none;
+  text-align: center;
+  margin: 4em auto;
+  .close-btn {
+    color: red;
+  }
+  .pane-content {
+    text-align: center;
+    #surveyMonkeyInfo {
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Styles for home page (panel content) image banner content */
+div.home-box-top {
+  width: 730px;
+  margin-bottom: 2em;
+  text-align: center;
+  img {
+    width: 730px;
+  }
+}
+div.home-box-bottom {
+  width: 730px;
+  margin-bottom: 0.5em;
+  div.movstrip {
+   overflow: hidden;
+   ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   ul li {
+    float: left;
+    width: 170px;
+    margin: 6px;
+    padding: 0px;
+   }
+   ul.slides_container li {
+    margin: 0;
+   }
+  }
+  img {
+    width: 170px;
+    height: 100px;
+  }
+  li.last img {
+    width: 55px;
+    height: 55px;
+  }
+}

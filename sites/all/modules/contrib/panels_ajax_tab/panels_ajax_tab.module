@@ -1,0 +1,246 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function panels_ajax_tab_ctools_plugin_api() {
+  return array("version" => "1");
+}
+
+/**
+ * Implementation of hook_ctools_plugin_dierctory() to let the system know
+ * we implement plugins.
+ */
+function panels_ajax_tab_ctools_plugin_directory($module, $plugin) {
+  if ($plugin == 'content_types') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implementation of hook_menu()
+ */
+function panels_ajax_tab_menu() {
+  $items = array();
+
+  $items['panels_ajax_tab/%/%'] = array(
+    'title' => 'panels-ajax tab AJAX callback',
+    'description' => 'AHAJ callback for panels tabs',
+    'page callback' => 'panels_ajax_tab_ajax',
+    'page arguments' => array(1, 2),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_menu()
+ */
+function panels_ajax_tab_theme($existing, $type, $theme, $path) {
+  return array(
+    'panels_ajax_tab_tabs' => array(
+      'variables' => array('tabs' => array(), 'tab_container_id' => NULL, 'context_string' => NULL, 'clean_url' => FALSE, 'clean_url_delim' => '/'),
+    ),
+    'panels_ajax_tab_container' => array(
+      'variables' => array('tab_container_id' => NULL, 'url_id' => NULL, 'context_string' => NULL, 'preloaded' => '', 'clean_url' => FALSE, 'clean_url_delim' => '/'),
+    ),
+    'panels_ajax_tab_ajax' => array(
+      'variables' => array('minipanel' => NULL),
+    ),
+    'panels_ajax_tab_tabs_edit_form' => array(
+      'render element' => 'form',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_boot().
+ *
+ * IF Clean-URLs are enabled, check for them and modify the request as needed
+ */
+function panels_ajax_tab_boot() {
+  $settings = variable_get('panels_ajax_tab', array('clean_url' => FALSE, 'clean_url_delim' => '/', 'panes' => array()));
+
+  if ($settings['clean_url']) {
+  
+    $delim = isset($settings['clean_url_delim']) ? $settings['clean_url_delim'] : '/';
+    
+    foreach ($settings['panes'] as $pane) {
+      foreach ($pane as $mininame => $item) {
+        if ($item) {
+          $trigger = $delim . $item;
+
+          $pathlen = strlen($_GET['q']);
+          $triggerlen = strlen($trigger);
+
+          if ($triggerlen > $pathlen) continue;
+
+          if (substr_compare($_GET['q'], $trigger, -$triggerlen) === 0) {
+            $_GET['q'] = substr($_GET['q'], 0, ($pathlen - $triggerlen));
+            $_GET['panels_ajax_tab_tab'] = $mininame;
+            break 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * AHAH call-back for preview
+ */
+function panels_ajax_tab_ajax($panel_name, $context_string) {
+  $mini = panels_ajax_tab_prepare_mini($panel_name, $context_string);
+
+  // Clear the JavaScript and CSS that are not related to the panels being rendered - they already exists
+  drupal_static_reset('drupal_add_js');
+  drupal_static_reset('drupal_add_css');
+
+  print theme('panels_ajax_tab_ajax', array('minipanel' => $mini));
+
+  exit;
+}
+
+function panels_ajax_tab_prepare_mini($mini, $context_string) {
+  ctools_include('context');
+  ctools_include('plugins', 'panels');
+
+  if (is_string($mini)) {
+    $mini = panels_mini_load($mini);
+  }
+
+  if ($context_string != 'none') {
+    $parts = explode(':', $context_string);
+    $entity_type = strtolower($parts[0]);
+    $entity_id = (int) $parts[1];
+    $entity = array_pop(entity_load($entity_type, array($entity_id)));
+
+    // If it's a node, check node-view permissions
+    if ($entity_type == 'node') {
+      if (!node_access('view', $entity)) {
+        drupal_access_denied();
+        exit();
+      }
+    }
+
+    $context_plugin = ctools_get_plugins('ctools', 'contexts', 'entity');
+    $context_plugin['keyword'] = $entity_type;
+    $context = ctools_context_create_entity(FALSE, $entity, FALSE, $context_plugin);
+
+    // Load up any contexts we might be using.
+    $context = ctools_context_match_required_contexts($mini->requiredcontexts, array($context));
+    $mini->context = $mini->display->context = ctools_context_load_contexts($mini, FALSE, $context);
+  }
+
+  if (empty($mini) || !empty($mini->disabled)) {
+    return;
+  }
+
+  $mini->display->owner = $mini;
+  // unique ID of this mini.
+  $mini->display->owner->id = $mini->name;
+
+  return $mini;
+
+}
+
+
+function theme_panels_ajax_tab_tabs($vars) {
+  foreach ($vars['tabs'] as $tab) {
+    $tabs[] = '<a href="' . $tab['href'] . '" class="panels-ajax-tab-tab" data-panel-name="' . $tab['mini_panel']->name . '" data-target-id="' . $vars['tab_container_id'] . '" data-entity-context="' . $vars['context_string'] . '">' . $tab['title'] . '</a>';
+  }
+  return theme('item_list', array('items' => $tabs, 'attributes' => array('class' => array('tabs', 'inline', 'panels-ajax-tab'))));
+}
+
+function theme_panels_ajax_tab_container($vars) {
+  return '<div data-panels-ajax-tab-preloaded="' . $vars['preloaded'] . '" id="panels-ajax-tab-container-' . $vars['tab_container_id'] . '" class="panels-ajax-tab-container">' . $vars['content'] . '</div>';
+}
+
+function theme_panels_ajax_tab_ajax($vars) {
+  $mini = $vars['minipanel'];
+  $layout = panels_get_layout($mini->display->layout);
+  $panels_output = panels_render_display($mini->display);
+
+  $output  = '';
+  $output .= '<?xml version="1.0" encoding="UTF-8" ?>';
+  $output .= '
+    <html version="HTML+RDFa+MathML 1.1"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:sioct="http://rdfs.org/sioc/types#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  ';
+  $output .= '<head>';
+
+  // Get the javascript and filter out the default misc/drupal.js - it's already been added by the calling page
+  $javascript = drupal_add_js();
+  unset($javascript['misc/drupal.js']);
+  $output .= drupal_get_js('header', $javascript);
+
+  // Add CSS
+  $output .= drupal_get_css();
+  $output .= "<link rel='stylesheet' type='text/css' href='" . base_path() . $layout['path'] . '/' . $layout['css'] . "' />";
+
+  $output .= '</head>';
+
+  // Print the output of the panel
+  $output .= '<body>';
+  $output .= theme('status_messages');
+  $output .= '<div class="panels-ajax-tab-panel panels-ajax-tab-panel-' . str_replace('_', '-', $mini->name) . '">';
+  $output .= $panels_output;
+  $output .= '</div>';
+  $output .= '</body></html>';
+
+  return $output;
+}
+
+
+function theme_panels_ajax_tab_tabs_edit_form($variables) {
+  $form = $variables['form'];
+  $output = '';
+  // Render elements that are supposed to be on top.
+  foreach (element_children($form) as $element) {
+    if ($element == 'mini_panels') {
+      break;
+    }
+    else {
+     $output .= drupal_render($form[$element]);
+    }
+  }
+  $rows = array();
+
+  foreach (element_children($form['mini_panels']) as $mini_panel) {
+    $form['mini_panels'][$mini_panel]['weight']['#attributes']['class'] = array('panel-weight');
+    $rows[] = array(
+      'data' => array(
+        drupal_render($form['mini_panels'][$mini_panel]['selected']),
+        drupal_render($form['mini_panels'][$mini_panel]['name']),
+        drupal_render($form['mini_panels'][$mini_panel]['tab_title']),
+        drupal_render($form['mini_panels'][$mini_panel]['url_id']),
+        drupal_render($form['mini_panels'][$mini_panel]['weight']),
+      ),
+      'class' => array('draggable'),
+    );
+
+  }
+  $header = array(t('Select'), t('Mini panel'), t('Tab title'), t('URL identifier'), t('Weight'));
+  $output .= theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('id' => 'panels-ajax-tab-admin-table')));
+  $output .= drupal_render_children($form);
+  drupal_add_tabledrag('panels-ajax-tab-admin-table', 'order', 'sibling', 'panel-weight');
+  return $output;
+}
+
+/**
+ * compare callback to sort panels based on weight
+ */
+function panels_ajax_tab_compare_weight($a, $b) {
+  return $a['weight'] - $b['weight'];
+}
