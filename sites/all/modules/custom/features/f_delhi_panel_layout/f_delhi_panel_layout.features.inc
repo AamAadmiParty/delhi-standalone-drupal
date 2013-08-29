@@ -32,9 +32,9 @@ function f_delhi_panel_layout_ctools_plugin_api() {
 function f_delhi_panel_layout_image_default_styles() {
   $styles = array();
 
-  // Exported image style: constituency_image.
-  $styles['constituency_image'] = array(
-    'name' => 'constituency_image',
+  // Exported image style: 230_x_150.
+  $styles['230_x_150'] = array(
+    'name' => '230_x_150',
     'effects' => array(
       1 => array(
         'label' => 'Resize',
