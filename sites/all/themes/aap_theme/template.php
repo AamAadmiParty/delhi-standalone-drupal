@@ -23,7 +23,7 @@ function aap_theme_breadcrumb($variables) {
   	$target_link = l($target_text , drupal_get_path_alias($target));
   	$content = $page_node->type;
   	$target_content = l($content, drupal_get_path_alias($content));
-  	$output .=  '<p>></p>' . $target_content;
+//  	$output .=  '<p>></p>' . $target_content;
   	$output .=  '<p>></p>' . $target_link;
   }
   else {
